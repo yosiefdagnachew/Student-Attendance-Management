@@ -1,0 +1,60 @@
+﻿@model SAS.Models.Enrollment
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Stud_id" class="control-label"></label>
+                <select asp-for="Stud_id" class ="form-control" asp-items="ViewBag.Stud_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Academic_y_id" class="control-label"></label>
+                <select asp-for="Academic_y_id" class ="form-control" asp-items="ViewBag.Academic_y_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course_id" class="control-label"></label>
+                <select asp-for="Course_id" class ="form-control" asp-items="ViewBag.Course_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Faculity_id" class="control-label"></label>
+                <select asp-for="Faculity_id" class ="form-control" asp-items="ViewBag.Faculity_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Semester_id" class="control-label"></label>
+                <select asp-for="Semester_id" class ="form-control" asp-items="ViewBag.Semester_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department_id" class="control-label"></label>
+                <select asp-for="Department_id" class ="form-control" asp-items="ViewBag.Department_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Enrollment_date" class="control-label"></label>
+                <input asp-for="Enrollment_date" class="form-control" />
+                <span asp-validation-for="Enrollment_date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

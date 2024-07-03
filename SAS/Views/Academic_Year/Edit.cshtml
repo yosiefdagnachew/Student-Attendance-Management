@@ -1,0 +1,32 @@
+﻿@model SAS.Models.Academic_Year
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Academic_y_id" />
+            <div class="form-group col-6">
+                <label asp-for="Academic_yearName" class="control-label"></label>
+                <input asp-for="Academic_yearName" class="form-control" />
+                <span asp-validation-for="Academic_yearName" class="text-danger"></span>
+            </div>
+            <div class="form-group col-6">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                    <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

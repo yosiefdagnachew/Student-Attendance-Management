@@ -1,0 +1,341 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> student attendance system</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/assets/css/site.css"  />
+    @*<link rel="stylesheet" href="~/SS.styles.css" asp-append-version="true" />*@
+    <link rel="stylesheet" href="~/assets/css/style.css" />
+    <link rel="stylesheet" href="~/assets/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="~/assets/asset/css/fontawesome.css" />
+     <link rel="stylesheet" href="~/assets/asset/css/all.css" />
+    <link rel="stylesheet" href="~/assets/asset/css/fontawesome.min.css" />
+    <link rel="stylesheet" href="~/assets/asset/css/brands.css" />
+    <link rel="stylesheet" href="~/assets/asset/css/brands.min.css" />
+    <link rel="stylesheet" href="~/assets/asset/css/solid.css"  />
+    <link rel="stylesheet" href="~/assets/asset/css/solid.min.css"  />
+
+</head>
+
+
+<body>
+        <div class="wrapper">
+            <div class="sidebar">
+
+                <div class="profile">
+                <img src="assets/img/dmu.jpg" alt="">
+                    <h4> debremarkos university</h4>
+                    <p> student attendance system </p>
+                </div>
+                   <ul>
+                        <li  class="dropdown">
+                            <a href="#">
+                                <span class="icon"><i class="fa-solid fa-bars"></i></span>
+                                <span class="item">Menu</span>
+                            </a>
+                        </li>
+
+                        <ul class="submenu">
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a asp-controller="Semesters" asp-action="index"> Semester </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                               <a  asp-controller="Years" asp-action="index"> years </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Attendances" asp-action="index"> Attendances </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Classes" asp-action="index"> Classes </a>
+                            </li>
+            
+                            <li>
+                                <a href="#"> 
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">item2</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">item3</span>
+                                </a>
+                            </li>
+                        </ul>
+                
+               
+                   
+             
+                     <li class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-user-shield"></i></span>
+                            <span class="item">admin</span>
+                        </a>
+                        </li>
+
+                           <ul class="submenu">
+
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Academic_Year" asp-action="index"> Academic_Year </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Class_program" asp-action="index"> Class_program </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Courses" asp-action="index"> Courses </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Department_course" asp-action="index"> Department_course </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Departments" asp-action="index"> Departments </a>
+                            </li>
+
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Faculities" asp-action="index"> Faculities </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Enrollments" asp-action="index"> Enrollments </a>
+                           </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">add course</span>
+                                </a>
+                            </li>
+
+                            <li> 
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">assign instructor</span>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">modify class</span>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">add student detail</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">modify student detail</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">veiw attendance</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">chenge password</span>
+                                </a>
+                            </li>
+                        </ul>
+                    <li class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-user-friends"></i></span>
+                            <span class="item">student</span>
+                        </a>
+                    </li>
+                    <ul class="submenu">
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Students" asp-action="index"> Students </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Student_course" asp-action="index"> Student_course </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Student_classProgram" asp-action="index"> Student_classProgram </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">chenge password</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">apply leave</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">apply complain</span>
+                                </a>
+                            </li>
+                        </ul>
+                   
+                    <li class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-user-graduate"></i></span>
+                            <span class="item">teacher</span>
+                        </a>
+                    </li>
+                    <ul class="submenu">
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Teachers" asp-action="index"> Teachers </a>
+                            </li>
+                            <li>
+                                <a class="icon"><i class="fa-solid fa-list"></i></a>
+                                <a  asp-controller="Course_teacher" asp-action="index"> Course_teacher </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">modify attendance</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">veiw attendance</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">manage leave</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">manage complain</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="icon"><i class="fa-solid fa-list"></i></span>
+                                    <span class="item">change password</span>
+                                </a>
+                            </li>
+                        </ul>
+                    <li class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-desktop"></i></span>
+                            <span class="item">dashboard</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">
+                            <span class="icon"><i class="fa-solid fa-book"></i></span>
+                            <span class="item">feedback</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      
+
+
+    <div class="main-content">
+
+        @RenderBody()
+        </div>
+   <div class="footer">
+  <div class="col">
+        <h3> about us</h3>
+     <p>this is debremarkos university student attendance system websites you can see yor attendance statues in this website </p>
+  </div>
+  <div class="col">
+      <h3> office</h3>
+      <p>debremarkos</p>
+      <p>white field</p>
+      <p>P.O.Box: 269</p>
+      <p>Fax: +251587711764</p>
+  </div> 
+  <div class="col">
+      <h3>links</h3>
+      <ul>
+        <li><a href="">home</a></li>
+        <li><a href="">service</a></li>
+        <li><a href="">features</a></li>
+        <li><a href="">contacts</a></li>
+      </ul>
+  </div>
+  <div class="col">
+      <h3>newsletter</h3>
+      <form>
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="enter your email"required>
+          <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+     
+  </div>
+   <div class="social-icons">
+           <i class="fa-brands fa-facebook-f"></i>
+           <i class="fa-brands fa-twitter"></i>  
+           <i class="fa-brands fa-tiktok"></i>
+           <i class="fa-brands fa-instagram"></i>
+   </div>
+   <hr>
+   <p class="copyright">attendance system © 2023 - All rights reserved</P>
+  </div>
+
+<script src="~/assets/js/jquery-3.5.1.js"> </script>
+<script src="~/assets/js/jquery.dataTables.min.js"> </script>
+<script src="~/assets/js/site.js"> </script>
+<script src="~/assets/asset/js/fontawesome.js"> </script>
+<script src="~/assets/asset/js/all.js"> </script>
+<script src="~/assets/asset/js/fontawesome.min.js"> </script>
+<script src="~/assets/asset/js/multi-select.min.js"> </script>
+<script>
+$(document).ready(function() {
+    $('#example').DataTable({
+        order: [[3, 'desc']],
+    });
+});
+</script>
+
+<script type="text/javascript">
+    
+    var dropdown = document.getElementsByClassName("dropdown");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

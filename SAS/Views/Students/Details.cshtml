@@ -1,0 +1,69 @@
+﻿@model SAS.Models.Student
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Academic_year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Academic_year.Academic_yearName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year.yearName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Stud_fname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Stud_fname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Stud_lname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Stud_lname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dob)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dob)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone_no)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone_no)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Stud_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+
+   

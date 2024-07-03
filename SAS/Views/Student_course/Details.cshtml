@@ -1,0 +1,67 @@
+﻿@model SAS.Models.Student_course
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Student)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Student.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Course)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Course.Course_code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Academic_Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Academic_Year.Academic_yearName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Department.Department_code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Faculity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Faculity.Faculty_email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Semester.SemesterName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Year)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Year.yearName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Attendance_time)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Attendance_time)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Stud_course_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+    

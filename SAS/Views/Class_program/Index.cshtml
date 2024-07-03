@@ -1,0 +1,65 @@
+﻿@model IEnumerable<SAS.Models.Class_program>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+    <a asp-action="Create" asp-controller="Class_program" class="btn btn-primary" style="float:right;"> Add New  </a>
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Class)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Course)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Faculity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Teacher)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Period)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Time)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class.Class_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Course.Course_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Faculity.Faculty_name)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Teacher.FullNameOfTeacher)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Period)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ClassProgram_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ClassProgram_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ClassProgram_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

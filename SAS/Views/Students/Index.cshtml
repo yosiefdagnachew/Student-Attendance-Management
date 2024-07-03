@@ -1,0 +1,78 @@
+﻿@model IEnumerable<SAS.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+    <a asp-action="Create" asp-controller="Students" class="btn btn-primary" style="float:right;"> Add New  </a>
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Academic_year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stud_fname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stud_lname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Dob)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Phone_no)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Academic_year.Academic_yearName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Year.yearName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stud_fname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stud_lname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dob)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone_no)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Stud_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Stud_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Stud_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

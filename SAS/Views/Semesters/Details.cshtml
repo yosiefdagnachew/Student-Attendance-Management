@@ -1,0 +1,26 @@
+﻿@model SAS.Models.Semester
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SemesterName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SemesterName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Semester_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+
+
+

@@ -1,0 +1,234 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open sans', sans-sarif;
+}
+
+body {
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar {
+    background: rgb(5,68,104);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 300%;
+    padding-left: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 200px;
+    width: 85%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    color: #fff;
+    padding: 0px 50px 0px;
+    border-top-left-radius: 125px;
+    font-size: 13px;
+    line-height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+    .col h3 {
+        width: fit-content;
+        margin-bottom: 10px;
+        position: relative;
+        font-size: 20px;
+    }
+
+ul li {
+    list-style: none;
+    margin-bottom: 5px;
+    margin-left: 0px;
+}
+
+    ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+.form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+
+    .form.fa-solid {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .form.input {
+        width: 100%;
+        background: transparent;
+        color: #ccc;
+        border: 0;
+        outline: none;
+    }
+
+    .form.button {
+        background: transparent;
+        border: 0;
+        outline: none;
+        cursor: pointer;
+    }
+
+.social-icons.fa-brands {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.hr {
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.wrapper .sidebar .profile {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+
+
+    .wrapper .sidebar .profile img {
+        display: block;
+        width: 100px;
+        height: 80px;
+        border-radius: 50%;
+        margin: 0 auto;
+    }
+
+
+
+    .wrapper .sidebar .profile h4 {
+        color: #ffffff;
+        margin: 10px 0 5px;
+    }
+
+    .wrapper .sidebar .profile p {
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+
+
+.wrapper .sidebar ul li a {
+    display: inline-flex;
+    padding: 15px 1px 15px 1px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241,237,237);
+    font-size: 16px;
+    position: relative;
+}
+
+
+.wrapper .sidebar ul .dropdown {
+    margin-left: 10px;
+    position: relative;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+
+
+
+.wrapper .sidebar.dropdown a, .item {
+    padding: 0px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
+
+    .wrapper .sidebar.dropdown a:hover, .item:hover {
+        color: black;
+        display: block;
+        width: 100%;
+    }
+
+.submenu {
+    display: none;
+    background-color: #262626;
+    background-position-x: left;
+    background-position-y: left;
+    padding-left: 2px;
+}
+
+.active {
+    position: fixed;
+    background-color: green;
+    color: white;
+}
+
+.dropdown.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+.wrapper .sidebar ul li a .icon {
+    color: #dee4ec;
+    width: 40px;
+    display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover {
+    color: #0c7db1;
+    background: whitesmoke;
+    border-right: 2px solid rgb(5,68,108);
+}
+
+.wrapper .section {
+    width: calc(100%-220px);
+    margin-left: 220px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .button {
+    background-color: rgb(7,105,185);
+    height: 50px;
+    float: right;
+    padding: 0 30px;
+}

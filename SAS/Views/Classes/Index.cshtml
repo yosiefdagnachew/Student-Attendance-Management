@@ -1,0 +1,42 @@
+﻿@model IEnumerable<SAS.Models.Class>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+    <a asp-action="Create" asp-controller="Classes" class="btn btn-primary" style="float:right;"> Add New  </a>
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Class_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Building_number)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Class_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Building_number)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Class_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Class_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Class_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

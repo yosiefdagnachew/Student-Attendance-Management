@@ -1,0 +1,44 @@
+﻿@model IEnumerable<SAS.Models.Department>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+    <a asp-action="Create" asp-controller="Departments" class="btn btn-primary" style="float:right;"> Add New  </a>
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+    <table id="example" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Department_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department_code)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department_code)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Department_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Department_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Department_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,65 @@
+﻿@model SAS.Models.Student
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="content-header" style="padding-left:250px; color:black;padding-bottom: 40px;padding-top: 10px;">
+</div>
+
+<div class="mainbody" style="padding-left:250px;">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Academic_y_id" class="control-label"></label>
+                <select asp-for="Academic_y_id" class ="form-control" asp-items="ViewBag.Academic_y_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Year_id" class="control-label"></label>
+                <select asp-for="Year_id" class ="form-control" asp-items="ViewBag.Year_id"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stud_fname" class="control-label"></label>
+                <input asp-for="Stud_fname" class="form-control" />
+                <span asp-validation-for="Stud_fname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Stud_lname" class="control-label"></label>
+                <input asp-for="Stud_lname" class="form-control" />
+                <span asp-validation-for="Stud_lname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+               @Html.DropDownList("Gender", Html.GetEnumSelectList<Gender>(), " -- Select Gender -- ", new {@class ="form-control"})
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dob" class="control-label"></label>
+                <input asp-for="Dob" class="form-control" />
+                <span asp-validation-for="Dob" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone_no" class="control-label"></label>
+                <input asp-for="Phone_no" class="form-control" />
+                <span asp-validation-for="Phone_no" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                    <a asp-action="Index">Back to List</a>
+            </div>
+        </form>
+    </div>
+</div>
+  
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
